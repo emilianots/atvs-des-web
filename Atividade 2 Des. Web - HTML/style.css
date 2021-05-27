@@ -192,3 +192,11 @@ body {
 .container .card.active .more::before {
     content: 'Leia menos';
 }
+
+li{
+    color: #ccc;
+}
+
+h4{
+    color: #ccc;
+}
