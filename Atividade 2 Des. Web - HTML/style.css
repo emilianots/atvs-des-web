@@ -84,8 +84,53 @@ body {
     overflow: hidden;
 }
 
+.container .card .content .tags {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    margin-bottom: 10px;
+}
+
+.container .card .content .tags span {
+    border-radius: 2px;
+    padding: 4px;
+    font-size: 13px;
+    color: #FFF;
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+.container .card .content .tags .tag-one {
+    background: yellow;
+    color: #000;
+}
+
+.container .card .content .tags .tag-two {
+    background: red;
+}
+
+.container .card .content .tags .tag-three {
+    background: blue;
+}
+
+.container .card .content .tags .tag-four {
+    background: purple;
+}
+
+
+
 .container .card.active .content{
     height: auto;
+}
+
+.container .card.active .content .more-info-link {
+    color: #FFF ;
+    cursor: pointer;
+
+    text-decoration: underline;
 }
 
 .container .card.active .content::before {
@@ -128,15 +173,22 @@ body {
     font-size: 14px;
 }
 
+.container .card .github-icon {
+    width: 5rem;
+    height: 5rem;
+
+    cursor: pointer;
+}
+
 .container .card.active .more {
     background: #ff2b7e;
     color: #fff;
 }
 
 .container .card .more::before {
-    content: 'Read more';
+    content: 'Leia mais';
 }
 
 .container .card.active .more::before {
-    content: 'Read Less';
+    content: 'Leia menos';
 }
