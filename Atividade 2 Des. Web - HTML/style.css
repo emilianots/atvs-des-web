@@ -200,3 +200,52 @@ li{
 h4{
     color: #ccc;
 }
+
+
+/* redes sociais */
+#table-container {
+    width: 100%;
+}
+
+#table-container .table {
+    border: 1px solid #ddd;
+    color: #000;
+    width: 100%;
+    border-color: #ddd;
+    background: #fff;
+}
+
+#table-container .table thead {
+    background: #ff2b7e;
+}
+
+#table-container .table tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+#table-container .table tbody tr:nth-child(even) {
+    background: #ccc;
+}
+
+
+#table-container .table td {
+    width: auto;
+    text-align: center;
+
+}
+
+#table-container .table thead tr th {
+    padding: 2%;
+}
+
+#table-container .table .icon {
+    background: #000;
+    width: 2rem;
+    height: 2rem;
+    margin: 10px auto;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;  
+    justify-content: center;
+    align-items: center;
+}
