@@ -1,0 +1,251 @@
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #313131;
+}
+
+.icon {
+    width: 5rem;
+    height: 5rem;
+    background: #17e78c;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+}
+
+.card.active .icon {
+    background: #ff3b7e;
+}
+
+/* img {
+    
+} */
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    flex-wrap: wrap;
+}   
+
+.container .card {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    background: #3f3f3f;
+
+    margin: 1rem;
+}
+
+.container .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #17e78c;
+    border-right:20px solid #17e78c;
+    
+}
+
+.container .card.active::before {
+    border-top: 20px solid #ff3b7e;
+    border-right:20px solid #ff3b7e;
+}
+
+.container .card .content {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+}
+
+.container .card .content .tags {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    margin-bottom: 10px;
+}
+
+.container .card .content .tags span {
+    border-radius: 2px;
+    padding: 4px;
+    font-size: 13px;
+    color: #FFF;
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+.container .card .content .tags .tag-one {
+    background: yellow;
+    color: #000;
+}
+
+.container .card .content .tags .tag-two {
+    background: red;
+}
+
+.container .card .content .tags .tag-three {
+    background: blue;
+}
+
+.container .card .content .tags .tag-four {
+    background: purple;
+}
+
+
+
+.container .card.active .content{
+    height: auto;
+}
+
+.container .card.active .content .more-info-link {
+    color: #FFF ;
+    cursor: pointer;
+
+    text-decoration: underline;
+}
+
+.container .card.active .content::before {
+    display: none;
+}
+
+.container .card .content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, #3f3f3f);
+}
+
+.container .card .content h3  {
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.container .card .content p {
+    font-family: 300;
+    color: #ccc;
+}
+
+.container .card .more {
+    position: relative;
+    padding: 10px 15px;
+    background: #17e78c;
+    margin-top: 15px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.container .card .github-icon {
+    width: 5rem;
+    height: 5rem;
+
+    cursor: pointer;
+}
+
+.container .card.active .more {
+    background: #ff2b7e;
+    color: #fff;
+}
+
+.container .card .more::before {
+    content: 'Leia mais';
+}
+
+.container .card.active .more::before {
+    content: 'Leia menos';
+}
+
+li{
+    color: #ccc;
+}
+
+h4{
+    color: #ccc;
+}
+
+
+/* redes sociais */
+#table-container {
+    width: 100%;
+}
+
+#table-container .table {
+    border: 1px solid #ddd;
+    color: #000;
+    width: 100%;
+    border-color: #ddd;
+    background: #fff;
+}
+
+#table-container .table thead {
+    background: #ff2b7e;
+}
+
+#table-container .table tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+#table-container .table tbody tr:nth-child(even) {
+    background: #ccc;
+}
+
+
+#table-container .table td {
+    width: auto;
+    text-align: center;
+
+}
+
+#table-container .table thead tr th {
+    padding: 2%;
+}
+
+#table-container .table .icon {
+    background: #000;
+    width: 2rem;
+    height: 2rem;
+    margin: 10px auto;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;  
+    justify-content: center;
+    align-items: center;
+}
