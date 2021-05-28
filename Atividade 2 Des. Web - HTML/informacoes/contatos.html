@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 01 - Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="card">
+                <div class="icon">
+                    <img src="../assets/felipe.jpg" />
+                </div>
+                
+                <div class="content">
+                    <h3>Felipe Venceslau</h3>
+                    <h4>Contato:</h4>
+                    <hr color="#ccc" size="1px"><br/>
+                    <ol type="I">
+                        <li>Email: felipevenceslau@alu.ufc.br</li>
+                        <li>Whatsapp: (88)996748183</li>
+                    </ol>
+                    
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="icon">
+                    <img src="../assets/emiliano.jpg" />
+                </div>
+                
+                <div class="content">
+                    <h3>Emiliano Feitosa</h3>
+                    <h4>Contato:</h4>
+                    <hr color="#ccc" size="1px"><br/>
+                    <ol type="I">
+                        <li>Email: email@gmail.com</li>
+                        <li>Whatsapp: (88)998123604</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="icon">
+                    <img src="../assets/joaovictor.jpg" />
+                </div>
+                
+                <div class="content">
+                    <h3>João Victor</h3>
+                    <h4>Contato:</h4>
+                    <hr color="#ccc" size="1px"><br/>
+                    <ol type="I">
+                        <li>Email: email@gmail.com</li>
+                        <li>Whatsapp: (99)999999999</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <footer class="main-footer">
+            <a class="footer-item" href="../index.html">Home</a>
+            <a class="footer-item" href="">Contatos</a>
+            <a class="footer-item" href="./historicosimples.html">Históricos</a>
+            <a class="footer-item" href="./interesses.html">Interesses</a>
+            <a class="footer-item" href="./redessociais.html">Redes sociais</a>
+        </footer>
+    </div>
+        
+        <script>
+            let more = document.querySelectorAll('.more');
+            for(let i = 0; i < more.length; i++) {
+                more[i].addEventListener('click', () => {
+                    more[i].parentNode.classList.toggle('active')
+            })
+        }
+    </script>
+</body>
+</html>
