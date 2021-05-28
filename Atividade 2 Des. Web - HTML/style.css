@@ -44,6 +44,15 @@ body {
     
 } */
 
+.page{
+    display: flex;
+    padding-top: 200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
 .container {
     position: relative;
     display: flex;
@@ -191,6 +200,24 @@ body {
 
 .container .card.active .more::before {
     content: 'Leia menos';
+}
+
+.main-footer {
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    height: 250px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    color: white
+}
+
+.main-footer .contact{
+    
+}
+.main-footer .contact::before{
+    content: "Contato";
 }
 
 li{
