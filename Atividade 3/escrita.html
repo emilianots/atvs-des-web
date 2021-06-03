@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="escritaeleitura.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <form 
+            id="form" 
+            action="./leitura.html"
+        >
+            <h1>Cadastro de Pessoas </h1>
+
+            <h2>Dados Pessoais</h2>
+            <div class="input-form-group">
+                <input 
+                    placeholder="Digite seu primeiro nome" 
+                    name="name" 
+                    id="input" 
+                    type="text"
+                    required
+                />
+                <input 
+                    placeholder="Digite seu sobrenome" 
+                    id="input"
+                    required    
+                />
+                <input placeholder="Digite seu e-mail" id="input" required  />
+                <input placeholder="Digite seu telefone" id="input" required  />
+                <input placeholder="Digite seu emprego" id="input" required  />
+                
+                <select required name="civil-state" id="select-civil-state">
+                    <option aria-disabled="true" value="default">Selecione o estado civil</option>
+                    <option value="Solteiro">Solteiro</option>
+                    <option value="Casado">Casado</option>
+                </select>
+            </div>
+
+            <hr >
+            <h2>Endereço</h2>
+            <div class="input-form-group">
+                
+                <input placeholder="Digite nome da rua" id="input" required  />
+                <input placeholder="Digite CEP" id="input" required  />
+                <input placeholder="Digite Número da casa" id="input" required  />
+                <input placeholder="Complemento..." id="input" />
+            </div>
+                
+
+            <button type="submit">
+                Enviar
+            </button>
+        </form>
+    </div>
+
+    <script>
+        let form = document.getElementById('form');
+        let infos = document.querySelectorAll('#input');
+        let civilState = document.getElementById('select-civil-state');
+        let infosArray = [];
+
+        
+        form.addEventListener('submit', (e) => {
+            for(var i=0; i < infos.length; i++) {
+                infosArray.push(infos[i].value);
+            }
+
+            infosArray.push(civilState.options[civilState.selectedIndex].value);
+            
+            let temp = infosArray[5];
+            infosArray[5] = infosArray[infosArray.length-1];
+            infosArray[infosArray.length-1] = temp;
+
+            console.log(infosArray);
+            
+            window.localStorage.setItem('atv-web:infosfilled', JSON.stringify(infosArray));
+
+
+        })
+    </script>
+</body>
+</html>
