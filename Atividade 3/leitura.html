@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="escritaeleitura.css">
+    <title>Leitura</title>
+</head>
+<body>
+    <div class="container">
+        
+        <form id="form" action="./escrita.html">
+            <h1>Leitura</h1>
+            <h2>Dados Pessoais</h2>
+            <div class="input-form-group">
+                <input 
+                    placeholder="Digite seu primeiro nome" 
+                    name="name" 
+                    id="input" 
+                    type="text"
+                    disabled
+                />
+                <input 
+                    placeholder="Digite seu sobrenome" 
+                    id="input"
+                    disabled
+                />
+                <input placeholder="Digite seu e-mail" id="input" disabled  />
+                <input placeholder="Digite seu telefone" id="input" disabled  />
+                <input placeholder="Digite seu emprego" id="input" disabled  />
+                <input id="input" disabled  />
+            </div>
+            <hr >
+            <h2>Endereço</h2>
+            <div class="input-form-group">
+                
+                <input placeholder="Digite nome da rua" id="input" disabled  />
+                <input placeholder="Digite CEP" id="input" disabled  />
+                <input placeholder="Digite Número da casa" id="input" disabled  />
+                <input placeholder="Complemento..." id="input" disabled/>
+            </div>
+
+            <button type="button">
+                Voltar
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const infosStoraged = JSON.parse(localStorage.getItem('atv-web:infosfilled'));
+        // console.log(infosStoraged)
+        
+        let inputs = document.querySelectorAll('#input');
+
+        inputs.forEach((input, index) => {
+            input.value = infosStoraged[index];
+        })
+
+        let button = document.querySelector('[type=button]');
+        button.addEventListener('click', (e) => {
+            document.location.href = './escrita.html';
+
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>
