@@ -41,7 +41,7 @@
                 <input placeholder="Complemento..." id="input" disabled/>
             </div>
 
-            <button type="button">
+            <button type="button" id="go-back">
                 Voltar
             </button>
         </form>
@@ -52,12 +52,11 @@
         // console.log(infosStoraged)
         
         let inputs = document.querySelectorAll('#input');
-
         inputs.forEach((input, index) => {
             input.value = infosStoraged[index];
         })
 
-        let button = document.querySelector('[type=button]');
+        let button = document.getElementById('go-back');
         button.addEventListener('click', (e) => {
             document.location.href = './escrita.html';
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição</title>
+    <link rel="stylesheet" href="./edicao.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <form 
+            id="form-update" 
+        >
+            <h1>Edição de dados de Pessoas </h1>
+
+            <h2>Dados Pessoais</h2>
+            <div class="input-form-group">
+                <input 
+                    placeholder="Digite seu primeiro nome" 
+                    name="name" 
+                    id="input" 
+                    type="text"
+                    required
+                />
+                <input 
+                    placeholder="Digite seu sobrenome" 
+                    id="input"
+                    required    
+                />
+                <input placeholder="Digite seu e-mail" id="input" disabled />
+                <input placeholder="Digite seu telefone" id="input" required  />
+                <input placeholder="Digite seu emprego" id="input" required  />
+                
+                <select required name="civil-state" id="input">
+                    <option aria-disabled="true" value="default">Selecione o estado civil</option>
+                    <option value="Solteiro">Solteiro</option>
+                    <option value="Casado">Casado</option>
+                </select>
+            </div>
+
+            <hr >
+            <h2>Endereço</h2>
+            <div class="input-form-group">
+                
+                <input placeholder="Digite nome da rua" id="input" required  />
+                <input placeholder="Digite CEP" id="input" required  />
+                <input placeholder="Digite Número da casa" id="input" required  />
+                <input placeholder="Complemento..." id="input" />
+            </div>
+                
+
+            <button id="update">
+                Atualizar
+            </button>
+            <button >
+                <a href="./leitura.html">Acessar Formulário de leitura</a>
+            </button>
+        </form>
+    </div>
+    <script>
+
+        const infosStoraged = JSON.parse(localStorage.getItem('atv-web:infosfilled'));
+        
+        let inputs = document.querySelectorAll('#input');
+        inputs.forEach((input, index) => {
+            input.value = infosStoraged[index];
+        })
+
+
+        let form = document.getElementById('form-update');
+        let infos = document.querySelectorAll('#input');
+        let civilState = document.getElementsByName('civil-state');
+
+        let updateBtn = document.getElementById('update')
+
+        updateBtn.addEventListener('click', (e) => {
+            let infosArray = [];
+            for(var i=0; i < infos.length; i++) {
+                infosArray.push(infos[i].value);
+            }
+
+            infosArray.push(civilState[0].options[civilState[0].selectedIndex].value);
+            
+            let temp = infosArray[5];
+            infosArray[5] = infosArray[infosArray.length-1];
+            infosArray[infosArray.length-1] = temp;
+
+            localStorage.setItem('atv-web:infosfilled', JSON.stringify(infosArray));
+            e.preventDefault()
+        })
+    </script>
+    
+</body>
+
+</html>
