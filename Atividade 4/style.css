@@ -28,7 +28,6 @@ body {
     width: 100vw;
     padding-bottom: 30px;
     object-fit: cover;
-    overflow-x: hidden;
     margin: 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -52,6 +51,8 @@ h3 {
     background-color: #211e62;
     border-radius: 5px;
     box-shadow: 0px 0px 1px #3f60dc, 0px -1px 1px #3f60dc;
+    overflow-y: auto;
+    
 }
 
 .helper-text {
