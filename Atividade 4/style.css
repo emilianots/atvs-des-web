@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.d-flex-center-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app {
+    background-image: url(./assets/image.jpg);
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.app > .heading > h1,
+h2,
+h3 {
+    color: white;
+    margin: 25px 0 0;
+}
+
+.app > .heading > h3 > span {
+    font-style: italic;
+}
+
+.app > .form-container {
+    margin-top: 1.5em;
+    padding: 20px 10px;
+    width: 600px;
+    height: 80%;
+    background-color: #211e62;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px #3f60dc, 0px -1px 1px #3f60dc;
+}
+
+.helper-text {
+    font-size: 14px;
+    color: #f3f3f3c7;
+    font-style: italic;
+}
+
+.app > .form-container > .form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+}
+
+.app > .form-container > .form-control > label {
+    color: white;
+    margin: 8px 0;
+}
+
+.app > .form-container > .form-control > input,
+select,
+textarea {
+    border-radius: 5px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid whitesmoke;
+    resize: vertical;
+}
+
+.app > .form-container > .form-control > .checkbox-row {
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app > .form-container > .form-control > .checkbox-row > input {
+    height: 15px;
+    width: 15px;
+    margin-right: 15px;
+}
+
+.app > .form-container > .form-control > .checkbox-row > label {
+    color: white;
+}
+
+.app > .form-container > button {
+    padding: 10px 20px;
+    width: calc(100% - 30px);
+    margin: 8px 15px;
+    cursor: pointer;
+    background-color: rgb(0, 88, 221);
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+.app > .form-container > button:hover {
+    background-color: rgb(0, 74, 185);
+}
+.app > .form-container > button:active {
+    box-shadow: 1px 1px 3px rgb(0, 0, 230), -1px -1px 3px rgb(0, 0, 230);
+    color: rgb(221, 221, 221);
+}

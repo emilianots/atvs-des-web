@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Atividade 4</title>
+    </head>
+    <body>
+        <div id="app" class="app d-flex-center-center">
+            <div class="heading d-flex-center-center">
+                <h1>Projeto adaptado - Des Web</h1>
+                <h3>Exemplo de formulário de pesquisa <span>(Survey)</span></h3>
+            </div>
+            <form class="form-container">
+                <div class="form-control">
+                    <label for="nome">Nome</label>
+                    <input
+                        required
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        placeholder="Coloque seu nome..."
+                    />
+                </div>
+
+                <div class="form-control">
+                    <label for="e-mail">E-mail</label>
+                    <input
+                        required
+                        type="email"
+                        name="e-mail"
+                        id="e-mail"
+                        placeholder="Coloque seu e-mail..."
+                    />
+                </div>
+
+                <div class="form-control">
+                    <label for="idade"
+                        >Idade
+                        <span class="helper-text">(opcional)</span></label
+                    >
+                    <input
+                        type="number"
+                        name="idade"
+                        id="idade"
+                        placeholder="Coloque seu e-idade..."
+                    />
+                </div>
+
+                <div class="form-control">
+                    <label for="estado-trabalho"
+                        >Qual opão descreve melhor seu estado atual?
+                        <span class="helper-text">(opcional)</span></label
+                    >
+                    <select name="estado-trabalho" id="estado-trabalho">
+                        <option aria-disabled="true" value="default">
+                            Selecione a ocupação
+                        </option>
+                        <option value="Estudante">Estudante</option>
+                        <option value="CLT">CLT</option>
+                        <option value="Prefiro não dizer">
+                            Prefiro não dizer
+                        </option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="form-control">
+                    <label for="estado-trabalho"
+                        >O que você gostaria de melhorar?
+                        <span class="helper-text"
+                            >(selecione quantas quiser)</span
+                        >
+                    </label>
+                    <div class="checkbox-row">
+                        <input
+                            type="checkbox"
+                            name="Ter mais tempo para estudar"
+                            id="Ter mais tempo para estudar"
+                        />
+                        <label for="Ter mais tempo para estudar"
+                            >Ter mais tempo para estudar</label
+                        >
+                    </div>
+                    <div class="checkbox-row">
+                        <input
+                            type="checkbox"
+                            name="Estudar mais do que gosto"
+                            id="Estudar mais do que gosto"
+                        />
+                        <label for="Estudar mais do que gosto"
+                            >Estudar mais do que gosto</label
+                        >
+                    </div>
+                    <div class="checkbox-row">
+                        <input
+                            type="checkbox"
+                            name="Gerência de projetos"
+                            id="Gerência de projetos"
+                        />
+                        <label for="Gerência de projetos"
+                            >Gerência de projetos</label
+                        >
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox" name="NodeJS" id="NodeJS" />
+                        <label for="NodeJS">NodeJS</label>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label for="commeentario"
+                        >Algum comentário ou sugestão?
+                        <span class="helper-text">(opcional)</span></label
+                    >
+                    <textarea
+                        name="commeentario"
+                        id="commeentario"
+                        cols="30"
+                        rows="5"
+                        placeholder="Insira seu comentário ou sugestão aqui..."
+                    ></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
