@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO APP</title>
+
+    <style>
+        body{
+            background-color: #1E90FF;
+            margin: 0px;
+        }
+
+        .container-cab{
+            margin: 3%;
+        }
+
+        h2{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        #p1{
+            color: #FFD700;
+            text-align: center;
+        }
+
+        #p2{
+            color: #7FFF00;
+            text-align: center;
+        }
+
+        #p3{
+            text-align: center;
+        }
+
+        .container-add{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input{
+            width: 50%;
+            height: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            border-color: #1366b9;
+            margin-right: 2%;
+            font-size: 15px;
+        }
+
+        .add-bt{
+            height: 31px;
+            width: 15%;
+            background-color: #1366b9;
+            border-radius: 5px;
+            border-color: #0d355c;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        .add-bt:hover{
+            background-color: #1E90FF;
+            cursor: pointer;
+        }
+
+
+        /* CSS pra testar como fica as atividades*/
+        
+        .container-atvs{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 2%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .atv1{
+            width: 85%;
+            background-color: rgb(47, 199, 199);
+            cursor: pointer;
+            height: 38px;
+            margin:5px;
+            border: 2px solid teal;
+            border-radius: 4px;
+        }
+
+        .atv1 p{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-right: 10px;
+            float: left;
+            margin: 10px;
+        }
+
+        .remover-bt{
+            background-color: rgb(255, 0, 0);
+            border-radius: 3px;
+            border: none;
+            width: 30px;
+            height: 20px;
+            font-size: 10px;
+            margin-top: 10px;
+        }
+
+        .remover-bt:hover{
+            background-color: tomato;
+            color: white;
+            cursor: pointer;
+        }
+
+        .atv3{
+            width: 85%;;
+            cursor: pointer;
+            height: 38px;
+            margin:5px;
+            border: 2px solid rgb(89, 119, 28);
+            border-radius: 4px;
+            background-color: #ADFF2F;
+        }
+
+        .atv3 p{
+            color: rgb(89, 119, 28);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-right: 10px;
+            float: left;
+            margin: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container-cab">
+        <h2>TAREFAS A FAZER (TO DO APP)</h2>
+        <p id="p1">Adicione texto dentro da caixa de texto para inserir novas atividades.</p>
+        <p id="p2">Clique no item para marca a atividade como concluída.</p>
+        <p id="p3">Clique no "X" da atividade para remover o item.</p>
+    </div>
+    <div class="container-add">
+        <input maxlength="50" placeholder="Nova atividade...">
+        <button class="add-bt" onclick="exluirAtv()">Adicionar</button>
+    </div>
+    <div class="container-atvs">
+        <!-- 
+            DIVs só pra ver como fica o layout. Pode usar a mesma estrutura quando for fazer o script.
+            O CSS tem umas guanbiarra kkkk
+        -->
+        <div class="atv1" onclick="concluirAtv()">
+            <p>Atividade 1</p>
+            <button class="remover-bt">X</button>
+        </div>
+        <div class="atv1" onclick="concluirAtv()">
+            <p>Atividade 2</p>
+            <button class="remover-bt">X</button>
+        </div>
+        <div class="atv3" onclick="concluirAtv()">
+            <p>Atividade 3 HTML</p>
+            <button class="remover-bt">X</button>
+        </div>
+        <div class="atv1" onclick="concluirAtv()">
+            <p>Atividade 4 CSS</p>
+            <button class="remover-bt">X</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+function concluirAtv(){
+    
+}
+
+function excluirAtv(){
+
+}
+
+</script>
