@@ -5,8 +5,6 @@ function createToDoWithEnterKey(e) {
 
   if(key===13) {
     addTodo()
-
-    inputElement.value=''
   }
 }
 
