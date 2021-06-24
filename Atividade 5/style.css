@@ -1,0 +1,132 @@
+body{
+  background-color: #1E90FF;
+  margin: 0px;
+}
+
+.container-cab{
+  margin: 3%;
+}
+
+h2{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#p1{
+  color: #FFD700;
+  text-align: center;
+}
+
+#p2{
+  color: #7FFF00;
+  text-align: center;
+}
+
+#p3{
+  text-align: center;
+}
+
+.container-add{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  width: 50%;
+  height: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border-color: #1366b9;
+  margin-right: 2%;
+  font-size: 15px;
+}
+
+.add-bt{
+  height: 31px;
+  width: 15%;
+  background-color: #1366b9;
+  border-radius: 5px;
+  border-color: #0d355c;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border: 0;
+}
+
+.add-bt:hover{
+  background-color: #1E90FF;
+  cursor: pointer;
+}
+
+
+/* CSS pra testar como fica as atividades*/
+
+.container-atvs{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.atv1, .active{
+  width: 85%;
+  background-color: rgb(47, 199, 199);
+  cursor: pointer;
+  height: 38px;
+  margin:5px;
+  border: 2px solid teal;
+  border-radius: 4px;
+}
+
+.atv1 p, .active p{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 10px;
+  float: left;
+  margin: 10px;
+}
+
+.remover-bt{
+  background-color: rgb(255, 0, 0);
+  border-radius: 3px;
+  border: none;
+  width: 30px;
+  height: 20px;
+  font-size: 10px;
+  margin-top: 10px;
+  z-index: 50;
+}
+
+.remover-bt:hover{
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+}
+
+.atv3, .active{
+  width: 85%;;
+  cursor: pointer;
+  height: 38px;
+  margin:5px;
+  border: 2px solid rgb(89, 119, 28);
+  border-radius: 4px;
+  background-color: #ADFF2F;
+}
+
+.atv3 p, .active p{
+  color: rgb(89, 119, 28);
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 10px;
+  float: left;
+  margin: 10px;
+}
